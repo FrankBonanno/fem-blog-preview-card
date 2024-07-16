@@ -1,0 +1,140 @@
+/* Variables */
+:root {
+  --clr-yellow: hsl(47, 88%, 63%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-gray: hsl(0, 0%, 50%);
+  --clr-black: hsl(0, 0%, 7%);
+  --font-sz: 16px;
+  --font-semibold: 500;
+  --font-bold: 800;
+}
+
+/* Resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+body,
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  background-color: var(--clr-yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'Figtree';
+  src: url('assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+  font-weight: 500 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Figtree Italic';
+  src: url('assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 500 800;
+  font-style: italic;
+}
+
+/* General Styles */
+.card {
+  background-color: var(--clr-white);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  box-shadow: var(--clr-black) 8px 8px;
+  max-width: 384px;
+  border-radius: 20px;
+  font-family: 'Figtree';
+  transition: all 0.2s;
+}
+
+.image img {
+  border-radius: 10px;
+}
+
+.content {
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  text-align: center;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background-color: var(--clr-yellow);
+  width: min-content;
+  font-size: 14px;
+  font-weight: var(--font-bold);
+  line-height: 150%;
+}
+
+.date {
+  font-size: 14px;
+  font-weight: var(--font-semibold);
+  line-height: 150%;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: var(--font-bold);
+  line-height: 150%;
+  text-decoration: none;
+  color: var(--clr-black);
+}
+
+.desc {
+  line-height: 150%;
+  font-weight: var(--font-semibold);
+  font-size: var(--font-sz);
+  color: var(--clr-gray);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.author p {
+  font-size: 14px;
+  font-weight: var(--font-bold);
+  line-height: 150%;
+}
+
+.card:hover {
+  box-shadow: var(--clr-black) 16px 16px;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.card:hover .title {
+  color: var(--clr-yellow);
+}
