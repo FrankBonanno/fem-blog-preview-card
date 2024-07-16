@@ -64,6 +64,7 @@ html {
   padding: 24px;
   box-shadow: var(--clr-black) 8px 8px;
   max-width: 384px;
+  border: var(--clr-black) 1px inset;
   border-radius: 20px;
   font-family: 'Figtree';
   transition: all 0.2s;
